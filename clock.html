@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clock | Stopwatch | Timer</title>
+  <link rel="stylesheet" href="clock.css">
+   
+</head>
+<body>
+  <div class="theme-toggle">
+    <button onclick="setTheme('light')">☀️</button>
+    <button onclick="setTheme('dark')">🌙</button>
+    <button onclick="setTheme('cyberpunk')">⚡</button>
+  </div>
+
+  <div class="display" id="clock">
+    <div class="time-box" id="clk-h">00</div>
+    <div class="time-box" id="clk-m">00</div>
+    <div class="time-box" id="clk-s">00</div>
+    <div class="time-box" id="clk-ms">00</div>
+  </div>
+
+  <div class="display hidden" id="stopwatch">
+    <div class="time-box" id="sw-h">00</div>
+    <div class="time-box" id="sw-m">00</div>
+    <div class="time-box" id="sw-s">00</div>
+    <div class="time-box" id="sw-ms">00</div>
+  </div>
+
+  <div class="display hidden" id="timer">
+    <input type="number" id="timerInput" placeholder="Seconds">
+    <div class="time-box" id="tm-h">00</div>
+    <div class="time-box" id="tm-m">00</div>
+    <div class="time-box" id="tm-s">00</div>
+    <div class="time-box" id="tm-ms">00</div>
+  </div>
+
+  <div class="btn-group" id="action-buttons"></div>
+
+  <div class="btn-group">
+    <button onclick="show('clock')">CLOCK</button>
+    <button onclick="show('stopwatch')">STOPWATCH</button>
+    <button onclick="show('timer')">TIMER</button>
+  </div>
+
+  <script src="clock.js"></script>
+</body>
+</html>
